@@ -6,29 +6,28 @@ Test Teardown      Close Session
 
 ***Test Cases***
 Deve acessar a tela Dialogs
-    Wait Until Page Contains        COMEÇAR       
-    Click Text                      COMEÇAR                
-    Wait Until Element Is Visible      xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]      
-    
-    Click Element       	        xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible      id=io.qaninja.android.twp:id/navView            
+    Get Started 
+    Open Nav    
 
     Click Text                      DIALOGS
     Wait Until Element Is Visible      id=io.qaninja.android.twp:id/toolbarTitle       
     Element Text Should Be          id=io.qaninja.android.twp:id/toolbarTitle       DIALOGS
 
 Deve acessar a tela de formulários
-    Wait Until Page Contains        COMEÇAR       
-    Click Text                      COMEÇAR                
-    Wait Until Element Is Visible      xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]      
-    
-    Click Element       	        xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible      id=io.qaninja.android.twp:id/navView            
+    Get Started 
+    Open Nav              
 
     Click Text                      FORMS
     Wait Until Element Is Visible      id=io.qaninja.android.twp:id/toolbarTitle       
     Element Text Should Be          id=io.qaninja.android.twp:id/toolbarTitle       FORMS
 
+Deve acessar a tela de vingadores
+    Get Started 
+    Open Nav             
+
+    Click Text                      AVENGERS
+    Wait Until Element Is Visible      id=io.qaninja.android.twp:id/toolbarTitle       
+    Element Text Should Be          id=io.qaninja.android.twp:id/toolbarTitle       AVENGERS
 
 
 ***Keywords***
@@ -39,6 +38,16 @@ Open Session
     ...                     platformName=Android
     ...                     deviceName= Emulator
     ...                     app=${EXECDIR}/app/twp.apk
+
+Get Started
+    Wait Until Page Contains        COMEÇAR       
+    Click Text                      COMEÇAR 
+
+Open Nav
+    Wait Until Element Is Visible      xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]      
+    
+    Click Element       	        xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+    Wait Until Element Is Visible      id=io.qaninja.android.twp:id/navView    
 
 Close Session
     Close Application
