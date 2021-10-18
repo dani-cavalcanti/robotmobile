@@ -5,7 +5,7 @@ Test Setup          Open Session
 Test Teardown       Close Session
 
 ***Test Cases***
-Deve selecionar a opção Python
+Deve marcar a opção Python
     Go To Radio Buttons
 
     ${element}=         Set Variable        xpath=//android.widget.RadioButton[contains(@text, 'Python')]
