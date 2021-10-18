@@ -1,6 +1,11 @@
 ***Settings***
 Library             AppiumLibrary
 
+***Variables***
+${START}            COMEÇAR 
+${HAMBURGUER}       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+${NAV_VIEW}         id=io.qaninja.android.twp:id/navView   
+
 ***Keywords***
 Open Session
     Set Appium Timeout      5
@@ -11,14 +16,14 @@ Open Session
     ...                     app=${EXECDIR}/app/twp.apk
 
 Get Started
-    Wait Until Page Contains        COMEÇAR       
-    Click Text                      COMEÇAR 
+    Wait Until Page Contains        ${START}        
+    Click Text                      ${START}  
 
 Open Nav
-    Wait Until Element Is Visible      xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]      
+    Wait Until Element Is Visible        ${HAMBURGUER}     
     
-    Click Element       	        xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible      id=io.qaninja.android.twp:id/navView    
+    Click Element       	             ${HAMBURGUER} 
+    Wait Until Element Is Visible        ${NAV_VIEW}
 
 Close Session
     Close Application
