@@ -9,7 +9,6 @@ ${TOOLBAR_TITLE}         id=io.qaninja.android.twp:id/toolbarTitle
 
 ***Test Cases***
 Deve acessar a tela Dialogs
-    Get Started 
     Open Nav    
 
     Click Text                      DIALOGS
@@ -17,7 +16,6 @@ Deve acessar a tela Dialogs
     Element Text Should Be          ${TOOLBAR_TITLE}       DIALOGS
 
 Deve acessar a tela de formulários
-    Get Started 
     Open Nav              
 
     Click Text                      FORMS
@@ -25,7 +23,6 @@ Deve acessar a tela de formulários
     Element Text Should Be          ${TOOLBAR_TITLE}       FORMS
 
 Deve acessar a tela de vingadores
-    Get Started 
     Open Nav             
 
     Click Text                      AVENGERS

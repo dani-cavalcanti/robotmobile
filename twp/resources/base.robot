@@ -14,6 +14,7 @@ Open Session
     ...                     platformName=Android
     ...                     deviceName= Emulator
     ...                     app=${EXECDIR}/app/twp.apk
+    Get Started
 
 Get Started
     Wait Until Page Contains        ${START}        
